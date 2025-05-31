@@ -22,6 +22,20 @@
       text-decoration: none;
       font-weight: bold;
     }
+	
+	.tagline {
+  margin: 0.2rem 0 0 0;
+  font-size: 0.95rem;
+  color: #ecf0f1;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.tagline span {
+  font-weight: 700;
+  color: #f39c12; /* по-тъмен златист нюанс за акцент */
+}
+
     .map-container {
       width: 100%;
       height: 400px;
@@ -53,8 +67,11 @@
 <body>
 
   <div class="navbar">
-    <div><a href="index.html">Selskostopanski gumi</div>
-    <div><a href="contacts.html">Contacts</a></div>
+    <div><a href="index.html">Селскостопански Гуми ЕООД</div>
+		<p class="tagline">
+      <span>Стара Загора | Висококачествени селскостопански и тракторни гуми | Доставка и безплатен монтаж</span>
+		</p>
+    <div><a href="contacts.html">Контакти</a></div>
   </div>
 
   <div class="map-container" id="map"></div>
@@ -72,6 +89,58 @@
       <!-- Data will be loaded here -->
     </tbody>
   </table>
+  
+  <section id="about" style="max-width: 900px; margin: 3rem auto; padding: 1rem 2rem; font-family: Arial, sans-serif; color: #333;">
+  <h2 style="text-align: center; color: #2c3e50; margin-bottom: 1rem;">За нас</h2>
+  <p>
+    <strong>Селскостопански гуми ЕООД</strong> е водещ доставчик на висококачествени селскостопански гуми и джанти в България. С дългогодишен опит и професионална грижа към всеки клиент, ние предлагаме точните гуми за трактори и селскостопанска техника от доказани производители като ЮМЗ, Болгар, Беларус, John Deere, Kubota, New Holland и други.
+  </p>
+  <p>
+    Нашият основен офис и магазин се намират в град Стара Загора, бул. „Свети Патриарх Евтимий“ 26. Освен качествени продукти, осигуряваме безплатен монтаж, доставка и помощ при товарене и разтоварване – всичко, за да улесним вашата работа и да осигурим надеждност на оборудването ви.
+  </p>
+  <p>
+    Работим с клиенти от цялата страна, включително в градове като Сливен, Ямбол, Пловдив, Хасково, Бургас, Айтос и София, предлагайки индивидуален подход и специализирана консултация.
+  </p>
+  <p>
+    Свържете се с нас на телефоните за магазин: <strong>0889 947 557</strong> и офис: <strong>0888 213 650</strong> или посетете нашия уебсайт:  
+    <a href="https://www.selskostopanskigumi.com/" target="_blank" rel="noopener" style="color:#2c3e50; text-decoration: underline;">www.selskostopanskigumi.com</a>
+  </p>
+</section>
+  
+   <!-- Image Gallery Section -->
+  <section style="padding: 2rem; background-color: #f9f9f9; text-align: center;">
+    <h2 style="margin-bottom: 1.5rem; color: #2c3e50;">Нашите гуми в действие</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+      <img src="gumi_01.jpg" alt="Гума 1" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
+      <img src="gumi_02.jpg" alt="Гума 2" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
+      <img src="gumi_03.jpg" alt="Гума 3" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
+	  <img src="gumi_04.jpg" alt="Гума 4" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
+	  <img src="gumi_05.jpg" alt="Гума 5" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
+	  <img src="gumi_06.jpg" alt="Гума 6" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
+	  <img src="gumi_07.jpg" alt="Гума 7" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
+	  <img src="gumi_08.jpg" alt="Гума 8" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
+	  <img src="gumi_09.jpg" alt="Гума 9" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
+    </div>
+  </section>
+    
+  
+  <!-- Footer -->
+  <footer style="background-color:#2c3e50; color:white; padding:2rem 1rem; text-align:center;">
+    <div style="max-width:800px; margin:0 auto;">
+      <p style="margin: 0.5rem 0;">📞 Телефон: <a href="tel:+359889947557" style="color: #ecf0f1; text-decoration: underline;">+359 889 947 557</a></p>
+      <p style="margin: 0.5rem 0;">📞 Телефон: <a href="tel:+359888213650" style="color: #ecf0f1; text-decoration: underline;">+359 888 213 650</a></p>
+	  <p style="margin: 0.5rem 0;">📧 Email: <a href="mailto:agritires@gmail.com" style="color: #ecf0f1; text-decoration: underline;">agritires@gmail.com</a></p>
+
+      <div style="margin-top:1rem;">
+        <a href="https://www.facebook.com/yourpage" target="_blank" style="margin: 0 10px; color:white; font-size: 1.5rem;" aria-label="Facebook">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/yourpage" target="_blank" style="margin: 0 10px; color:white; font-size: 1.5rem;" aria-label="Instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Your data converted from Excel (sample from your data)
