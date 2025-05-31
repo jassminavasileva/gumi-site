@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selskostopanski Gumi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      padding: 1rem 2rem;
+      color: white;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .map-container {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 90%;
+      margin: 0 auto 2rem;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+    }
+    th {
+      background-color: #f4f4f4;
+      user-select: none;
+    }
+    th.sort-asc::after {
+      content: " ▲";
+    }
+    th.sort-desc::after {
+      content: " ▼";
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div>Selskostopanski Gumi</div>
+    <div><a href="contacts.html">Contacts</a></div>
+  </div>
+
+  <div class="map-container" id="map"></div>
+
+  <table id="gumiTable">
+    <thead>
+      <tr>
+        <th data-column="colazh">Цолаж</th>
+        <th data-column="manufacturer">Производител</th>
+        <th data-column="size">Размер</th>
+        <th data-column="price">Цена (лв.)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data will be loaded here -->
+    </tbody>
+  </table>
+
+  <script>
+    // Your data converted from Excel (sample from your data)
+    const gumiData = [
+      { colazh: '13.6-38', manufacturer: 'ЮМЗ', size: '13.6-38', price: 630 },
+      { colazh: '15.5-38', manufacturer: 'ЮМЗ', size: '15.5-38', price: 670 },
+      { colazh: '7.50-20', manufacturer: 'ЮМЗ', size: '7.50-20', price: 180 },
+
+      { colazh: '13.6-38', manufacturer: 'БОЛГАР', size: '13.6-38', price: 630 },
+      { colazh: '15.5-38', manufacturer: 'БОЛГАР', size: '15.5-38', price: 670 },
+      { colazh: '7.50-20', manufacturer: 'БОЛГАР', size: '7.50-20', price: 180 },
+      { colazh: '8.3-20', manufacturer: 'БОЛГАР', size: '8.3-20', price: null },
+      { colazh: '11.2-20', manufacturer: 'БОЛГАР', size: '11.2-20', price: null },
+
+      { colazh: '18.4-34', manufacturer: 'БЕЛАРУС', size: '18.4-34', price: 1000 },
+      { colazh: '16.9-38', manufacturer: 'БЕЛАРУС', size: '16.9-38', price: 900 },
+      { colazh: '360/70R24', manufacturer: 'БЕЛАРУС', size: '360/70R24', price: 640 },
+      { colazh: '360/70R20', manufacturer: 'БЕЛАРУС', size: '360/70R20', price: 570 },
+
+      { colazh: '13.6-38', manufacturer: 'Т40', size: '13.6-38', price: 630 },
+      { colazh: '14.9-30', manufacturer: 'Т40', size: '14.9-30', price: null },
+      { colazh: '8.3-20', manufacturer: 'Т40', size: '8.3-20', price: null },
+
+      { colazh: '11.2-28', manufacturer: 'Т25', size: '11.2-28', price: 400 },
+
+      { colazh: '530R610', manufacturer: 'Т150 NORTEC', size: '530R610', price: null },
+      { colazh: '530R610', manufacturer: 'Т150 КАМА', size: '530R610', price: null },
+
+      { colazh: '8.25x15', manufacturer: '4 ТОНА РЕМАРКЕ', size: '8.25x15', price: 320 },
+
+      { colazh: '23.1R-26', manufacturer: 'ХТЗ', size: '23.1R-26', price: null },
+
+      { colazh: '9.5-32', manufacturer: 'Т16', size: '9.5-32', price: 415 },
+      { colazh: '6.50-16', manufacturer: 'Т16', size: '6.50-16', price: 130 },
+
+      { colazh: '320/85R20', manufacturer: 'JOHN DEERE', size: '320/85R20', price: null },
+      { colazh: '320/70R24', manufacturer: 'JOHN DEERE', size: '320/70R24', price: null },
+      { colazh: '340/85R24', manufacturer: 'JOHN DEERE', size: '340/85R24', price: null },
+      { colazh: '360/70R24', manufacturer: 'JOHN DEERE', size: '360/70R24', price: null },
+      { colazh: '380/70R24', manufacturer: 'JOHN DEERE', size: '380/70R24', price: null },
+      { colazh: '380/85R24', manufacturer: 'JOHN DEERE', size: '380/85R24', price: null },
+      // ... Add all other entries similarly ...
+    ];
+
+    // Function to render the table body
+    function renderTable(data) {
+      const tbody = document.querySelector("#gumiTable tbody");
+      tbody.innerHTML = '';
+      data.forEach(item => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${item.colazh || '-'}</td>
+          <td>${item.manufacturer || '-'}</td>
+          <td>${item.size || '-'}</td>
+          <td>${item.price != null ? item.price + ' лв.' : '-'}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Sorting logic
+    let currentSort = { column: null, direction: 1 };
+
+    function sortTable(column) {
+      if (currentSort.column === column) {
+        currentSort.direction *= -1;
+      } else {
+        currentSort.column = column;
+        currentSort.direction = 1;
+      }
+
+      gumiData.sort((a, b) => {
+        let valA = a[column] || '';
+        let valB = b[column] || '';
+
+        // For price, sort numbers; for others, sort strings
+        if (column === 'price') {
+          valA = valA === null ? -Infinity : valA;
+          valB = valB === null ? -Infinity : valB;
+          return (valA - valB) * currentSort.direction;
+        } else {
+          return valA.toString().localeCompare(valB.toString()) * currentSort.direction;
+        }
+      });
+
+      updateSortIndicators();
+      renderTable(gumiData);
+    }
+
+    function updateSortIndicators() {
+      const headers = document.querySelectorAll("#gumiTable thead th");
+      headers.forEach(th => {
+        th.classList.remove('sort-asc', 'sort-desc');
+        if (th.dataset.column === currentSort.column) {
+          th.classList.add(currentSort.direction === 1 ? 'sort-asc' : 'sort-desc');
+        }
+      });
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      renderTable(gumiData);
+      document.querySelectorAll("#gumiTable thead th").forEach(th => {
+        th.addEventListener('click', () => sortTable(th.dataset.column));
+      });
+
+      // Initialize Google Map
+      function initMap() {
+        const staraZagora = { lat: 42.4018, lng: 25.6437 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 13,
+          center: staraZagora,
+        });
+        new google.maps.Marker({
+          position: staraZagora,
+          map: map,
+        });
+      }
+      window.initMap = initMap;
+    });
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBslCFULaHWdCOXrRZQ1XlQNadQcLfS68Q&callback=initMap">
+  </script>
+</body>
+</html>
