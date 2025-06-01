@@ -363,26 +363,25 @@
       }
 
       // Initialize
-      document.addEventListener("DOMContentLoaded", () => {
-        renderTable(gumiData);
-        document.querySelectorAll("#gumiTable thead th").forEach((th) => {
-          th.addEventListener("click", () => sortTable(th.dataset.column));
-        });
+      function initMap() {
+  const staraZagora = { lat: 42.4018, lng: 25.6437 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 13,
+    center: staraZagora,
+  });
+  new google.maps.Marker({
+    position: staraZagora,
+    map: map,
+  });
+}
+window.initMap = initMap;
 
-        // Initialize Google Map
-        function initMap() {
-          const staraZagora = { lat: 42.4018, lng: 25.6437 };
-          const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 13,
-            center: staraZagora,
-          });
-          new google.maps.Marker({
-            position: staraZagora,
-            map: map,
-          });
-        }
-        window.initMap = initMap;
-      });
+document.addEventListener("DOMContentLoaded", () => {
+  renderTable(gumiData);
+  document.querySelectorAll("#gumiTable thead th").forEach((th) => {
+    th.addEventListener("click", () => sortTable(th.dataset.column));
+  });
+});
     </script>
 
     <script
