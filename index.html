@@ -1,270 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Selskostopanski Gumi</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #2c3e50;
-      padding: 1rem 2rem;
-      color: white;
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-	
-	.tagline {
-  margin: 0.2rem 0 0 0;
-  font-size: 0.95rem;
-  color: #ecf0f1;
-  font-weight: 500;
-  line-height: 1.2;
-}
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Селскостопански Гуми</title>
 
-.tagline span {
-  font-weight: 700;
-  color: #f39c12; /* по-тъмен златист нюанс за акцент */
-}
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    .map-container {
-      width: 100%;
-      height: 400px;
-      margin-bottom: 20px;
-    }
-    table {
-      width: 90%;
-      margin: 0 auto 2rem;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: center;
-      cursor: pointer;
-    }
-    th {
-      background-color: #f4f4f4;
-      user-select: none;
-    }
-    th.sort-asc::after {
-      content: " ▲";
-    }
-    th.sort-desc::after {
-      content: " ▼";
-    }
-  </style>
-</head>
-<body>
-
-  <div class="navbar">
-    <div><a href="index.html">Селскостопански Гуми ЕООД</div>
-		<p class="tagline">
-      <span>Стара Загора | Висококачествени селскостопански и тракторни гуми | Доставка и безплатен монтаж</span>
-		</p>
-    <div><a href="contacts.html">Контакти</a></div>
-  </div>
-
-  <div class="map-container" id="map"></div>
-
-  <table id="gumiTable">
-    <thead>
-      <tr>
-        <th data-column="colazh">Цолаж</th>
-        <th data-column="manufacturer">Производител</th>
-        <th data-column="size">Размер</th>
-        <th data-column="price">Цена (лв.)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Data will be loaded here -->
-    </tbody>
-  </table>
-  
-  <section id="about" style="max-width: 900px; margin: 3rem auto; padding: 1rem 2rem; font-family: Arial, sans-serif; color: #333;">
-  <h2 style="text-align: center; color: #2c3e50; margin-bottom: 1rem;">За нас</h2>
-  <p>
-    <strong>Селскостопански гуми ЕООД</strong> е водещ доставчик на висококачествени селскостопански гуми и джанти в България. С дългогодишен опит и професионална грижа към всеки клиент, ние предлагаме точните гуми за трактори и селскостопанска техника от доказани производители като ЮМЗ, Болгар, Беларус, John Deere, Kubota, New Holland и други.
-  </p>
-  <p>
-    Нашият основен офис и магазин се намират в град Стара Загора, бул. „Свети Патриарх Евтимий“ 26. Освен качествени продукти, осигуряваме безплатен монтаж, доставка и помощ при товарене и разтоварване – всичко, за да улесним вашата работа и да осигурим надеждност на оборудването ви.
-  </p>
-  <p>
-    Работим с клиенти от цялата страна, включително в градове като Сливен, Ямбол, Пловдив, Хасково, Бургас, Айтос и София, предлагайки индивидуален подход и специализирана консултация.
-  </p>
-  <p>
-    Свържете се с нас на телефоните за магазин: <strong>0889 947 557</strong> и офис: <strong>0888 213 650</strong> или посетете нашия уебсайт:  
-    <a href="https://www.selskostopanskigumi.com/" target="_blank" rel="noopener" style="color:#2c3e50; text-decoration: underline;">www.selskostopanskigumi.com</a>
-  </p>
-</section>
-  
-   <!-- Image Gallery Section -->
-  <section style="padding: 2rem; background-color: #f9f9f9; text-align: center;">
-    <h2 style="margin-bottom: 1.5rem; color: #2c3e50;">Галерия</h2>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-      <img src="gumi_01.jpg" alt="Гума 1" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
-      <img src="gumi_02.jpg" alt="Гума 2" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
-      <img src="gumi_03.jpg" alt="Гума 3" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
-	  <img src="gumi_04.jpg" alt="Гума 4" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
-	  <img src="gumi_05.jpg" alt="Гума 5" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
-	  <img src="gumi_06.jpg" alt="Гума 6" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
-	  <img src="gumi_07.jpg" alt="Гума 7" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
-	  <img src="gumi_08.jpg" alt="Гума 8" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
-	  <img src="gumi_09.jpg" alt="Гума 9" style="width: 300px; height: 200px; object-fit: cover; border-radius: 8px;">
-    </div>
-  </section>
-    
-  
-  <!-- Footer -->
-  <footer style="background-color:#2c3e50; color:white; padding:2rem 1rem; text-align:center;">
-    <div style="max-width:800px; margin:0 auto;">
-      <p style="margin: 0.5rem 0;">📞 Телефон: <a href="tel:+359889947557" style="color: #ecf0f1; text-decoration: underline;">+359 889 947 557</a></p>
-      <p style="margin: 0.5rem 0;">📞 Телефон: <a href="tel:+359888213650" style="color: #ecf0f1; text-decoration: underline;">+359 888 213 650</a></p>
-	  <p style="margin: 0.5rem 0;">📧 Email: <a href="mailto:agritires@gmail.com" style="color: #ecf0f1; text-decoration: underline;">agritires@gmail.com</a></p>
-
-      <div style="margin-top:1rem;">
-        <a href="https://www.facebook.com/yourpage" target="_blank" style="margin: 0 10px; color:white; font-size: 1.5rem;" aria-label="Facebook">
-          <i class="fab fa-facebook"></i> Facebook
-        </a>
-        <a href="https://www.instagram.com/yourpage" target="_blank" style="margin: 0 10px; color:white; font-size: 1.5rem;" aria-label="Instagram">
-          <i class="fab fa-instagram"></i> Instagram
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="brand">
+        <a href="index.html">
+          <img src="tyre-logo.png" alt="Tyre Logo" />
         </a>
       </div>
+      <div class="navbar-right">
+        <a class="contact-link" href="contacts.html">КОНТАКТИ</a>
+      </div>
     </div>
-  </footer>
 
-  <script>
-    // Your data converted from Excel (sample from your data)
-    const gumiData = [
-      { colazh: '13.6-38', manufacturer: 'ЮМЗ', size: '13.6-38', price: 630 },
-      { colazh: '15.5-38', manufacturer: 'ЮМЗ', size: '15.5-38', price: 670 },
-      { colazh: '7.50-20', manufacturer: 'ЮМЗ', size: '7.50-20', price: 180 },
+    <div class="navbar-second">
+      <div class="container">
+        <div class="tagline">
+          <span><i class="fas fa-map-marker-alt"></i> Стара Загора</span>
+          <span class="delimiter">•</span>
+          висококачествени селскостопански гуми
+          <span class="delimiter">•</span>
+          тракторни гуми
+          <span class="delimiter">•</span>
+          доставка и безплатен монтаж
+          <br />
+          <span><i class="fa-solid fa-phone"></i> Телефон </span>
+          <span class="delimiter">•</span>
+          <a href="tel:+359888213650">0888 213 650</a>
+          <span class="delimiter">•</span>
+          <a href="tel:+359889947557">0889 947 557</a>
+        </div>
+      </div>
+    </div>
 
-      { colazh: '13.6-38', manufacturer: 'БОЛГАР', size: '13.6-38', price: 630 },
-      { colazh: '15.5-38', manufacturer: 'БОЛГАР', size: '15.5-38', price: 670 },
-      { colazh: '7.50-20', manufacturer: 'БОЛГАР', size: '7.50-20', price: 180 },
-      { colazh: '8.3-20', manufacturer: 'БОЛГАР', size: '8.3-20', price: null },
-      { colazh: '11.2-20', manufacturer: 'БОЛГАР', size: '11.2-20', price: null },
+    <div class="map-container" id="map"></div>
+    <!-- Tyres Table Section -->
+    <section
+      style="padding: 2rem; background-color: #f9f9f9; text-align: center"
+    >
+      <h2 style="margin-bottom: 1.5rem; color: #2c3e50">
+        Селскостопански гуми
+      </h2>
+      <table id="gumiTable">
+        <thead>
+          <tr>
+            <th data-column="colazh">Цолаж</th>
+            <th data-column="manufacturer">Производител</th>
+            <th data-column="size">Размер</th>
+            <th data-column="price">Цена (лв.)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be loaded here -->
+        </tbody>
+      </table>
+    </section>
+    <!-- About Us Section -->
+    <section id="about">
+      <h2>За нас</h2>
+      <p>
+        <strong>Селскостопански гуми ЕООД</strong> е водещ доставчик на
+        висококачествени селскостопански гуми и джанти в България. С
+        дългогодишен опит и професионална грижа към всеки клиент, ние предлагаме
+        точните гуми за трактори и селскостопанска техника от доказани
+        производители като ЮМЗ, Болгар, Беларус, John Deere, Kubota, New Holland
+        и други.
+      </p>
+      <p>
+        Нашият основен офис и магазин се намират в град Стара Загора, бул.
+        „Свети Патриарх Евтимий“ 26. Освен качествени продукти, осигуряваме
+        безплатен монтаж, доставка и помощ при товарене и разтоварване – всичко,
+        за да улесним вашата работа и да осигурим надеждност на оборудването ви.
+      </p>
+      <p>
+        Работим с клиенти от цялата страна, включително в градове като Сливен,
+        Ямбол, Пловдив, Хасково, Бургас, Айтос и София, предлагайки индивидуален
+        подход и специализирана консултация.
+      </p>
+      <p>
+        Свържете се с нас на телефоните за магазин:
+        <strong>0889 947 557</strong> и офис: <strong>0888 213 650</strong> или
+        посетете нашия уебсайт:
+        <a
+          href="https://www.selskostopanskigumi.com/"
+          target="_blank"
+          rel="noopener"
+          >www.selskostopanskigumi.com</a
+        >
+      </p>
+    </section>
 
-      { colazh: '18.4-34', manufacturer: 'БЕЛАРУС', size: '18.4-34', price: 1000 },
-      { colazh: '16.9-38', manufacturer: 'БЕЛАРУС', size: '16.9-38', price: 900 },
-      { colazh: '360/70R24', manufacturer: 'БЕЛАРУС', size: '360/70R24', price: 640 },
-      { colazh: '360/70R20', manufacturer: 'БЕЛАРУС', size: '360/70R20', price: 570 },
+    <!-- Image Gallery Section -->
+    <section class="gallery">
+      <h2>Галерия</h2>
+      <div class="images-container">
+        <img src="gumi_01.jpg" alt="Гума 1" />
+        <img src="gumi_02.jpg" alt="Гума 2" />
+        <img src="gumi_03.jpg" alt="Гума 3" />
+        <img src="gumi_04.jpg" alt="Гума 4" />
+        <img src="gumi_05.jpg" alt="Гума 5" />
+        <img src="gumi_06.jpg" alt="Гума 6" />
+        <img src="gumi_07.jpg" alt="Гума 7" />
+        <img src="gumi_08.jpg" alt="Гума 8" />
+        <img src="gumi_09.jpg" alt="Гума 9" />
+      </div>
+    </section>
 
-      { colazh: '13.6-38', manufacturer: 'Т40', size: '13.6-38', price: 630 },
-      { colazh: '14.9-30', manufacturer: 'Т40', size: '14.9-30', price: null },
-      { colazh: '8.3-20', manufacturer: 'Т40', size: '8.3-20', price: null },
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <i class="fa-solid fa-phone"></i>
+        <p>
+          <a href="tel:+359889947557">+359 889 947 557</a>
+        </p>
+        <i class="fa-solid fa-phone"></i>
+        <p>
+          <a href="tel:+359888213650">+359 888 213 650</a>
+        </p>
+        <i class="fa-regular fa-envelope"></i>
+        <p>
+          <a href="mailto:agritires@gmail.com">agritires@gmail.com</a>
+        </p>
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Стара Загора, бул. "Патриарх Евтимий" 26</p>
 
-      { colazh: '11.2-28', manufacturer: 'Т25', size: '11.2-28', price: 400 },
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/GUMI0STARA0ZAGORA/"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+          <a
+            href="https://www.instagram.com/yourpage"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+    </footer>
 
-      { colazh: '530R610', manufacturer: 'Т150 NORTEC', size: '530R610', price: null },
-      { colazh: '530R610', manufacturer: 'Т150 КАМА', size: '530R610', price: null },
+    <script>
+      // Your data converted from Excel (sample from your data)
+      const gumiData = [
+        { colazh: "13.6-38", manufacturer: "ЮМЗ", size: "13.6-38", price: 630 },
+        { colazh: "15.5-38", manufacturer: "ЮМЗ", size: "15.5-38", price: 670 },
+        { colazh: "7.50-20", manufacturer: "ЮМЗ", size: "7.50-20", price: 180 },
 
-      { colazh: '8.25x15', manufacturer: '4 ТОНА РЕМАРКЕ', size: '8.25x15', price: 320 },
+        {
+          colazh: "13.6-38",
+          manufacturer: "БОЛГАР",
+          size: "13.6-38",
+          price: 630,
+        },
+        {
+          colazh: "15.5-38",
+          manufacturer: "БОЛГАР",
+          size: "15.5-38",
+          price: 670,
+        },
+        {
+          colazh: "7.50-20",
+          manufacturer: "БОЛГАР",
+          size: "7.50-20",
+          price: 180,
+        },
+        {
+          colazh: "8.3-20",
+          manufacturer: "БОЛГАР",
+          size: "8.3-20",
+          price: null,
+        },
+        {
+          colazh: "11.2-20",
+          manufacturer: "БОЛГАР",
+          size: "11.2-20",
+          price: null,
+        },
 
-      { colazh: '23.1R-26', manufacturer: 'ХТЗ', size: '23.1R-26', price: null },
+        {
+          colazh: "18.4-34",
+          manufacturer: "БЕЛАРУС",
+          size: "18.4-34",
+          price: 1000,
+        },
+        {
+          colazh: "16.9-38",
+          manufacturer: "БЕЛАРУС",
+          size: "16.9-38",
+          price: 900,
+        },
+        {
+          colazh: "360/70R24",
+          manufacturer: "БЕЛАРУС",
+          size: "360/70R24",
+          price: 640,
+        },
+        {
+          colazh: "360/70R20",
+          manufacturer: "БЕЛАРУС",
+          size: "360/70R20",
+          price: 570,
+        },
 
-      { colazh: '9.5-32', manufacturer: 'Т16', size: '9.5-32', price: 415 },
-      { colazh: '6.50-16', manufacturer: 'Т16', size: '6.50-16', price: 130 },
+        { colazh: "13.6-38", manufacturer: "Т40", size: "13.6-38", price: 630 },
+        {
+          colazh: "14.9-30",
+          manufacturer: "Т40",
+          size: "14.9-30",
+          price: null,
+        },
+        { colazh: "8.3-20", manufacturer: "Т40", size: "8.3-20", price: null },
 
-      { colazh: '320/85R20', manufacturer: 'JOHN DEERE', size: '320/85R20', price: null },
-      { colazh: '320/70R24', manufacturer: 'JOHN DEERE', size: '320/70R24', price: null },
-      { colazh: '340/85R24', manufacturer: 'JOHN DEERE', size: '340/85R24', price: null },
-      { colazh: '360/70R24', manufacturer: 'JOHN DEERE', size: '360/70R24', price: null },
-      { colazh: '380/70R24', manufacturer: 'JOHN DEERE', size: '380/70R24', price: null },
-      { colazh: '380/85R24', manufacturer: 'JOHN DEERE', size: '380/85R24', price: null },
-      // ... Add all other entries similarly ...
-    ];
+        { colazh: "11.2-28", manufacturer: "Т25", size: "11.2-28", price: 400 },
 
-    // Function to render the table body
-    function renderTable(data) {
-      const tbody = document.querySelector("#gumiTable tbody");
-      tbody.innerHTML = '';
-      data.forEach(item => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${item.colazh || '-'}</td>
-          <td>${item.manufacturer || '-'}</td>
-          <td>${item.size || '-'}</td>
-          <td>${item.price != null ? item.price + ' лв.' : '-'}</td>
+        {
+          colazh: "530R610",
+          manufacturer: "Т150 NORTEC",
+          size: "530R610",
+          price: null,
+        },
+        {
+          colazh: "530R610",
+          manufacturer: "Т150 КАМА",
+          size: "530R610",
+          price: null,
+        },
+
+        {
+          colazh: "8.25x15",
+          manufacturer: "4 ТОНА РЕМАРКЕ",
+          size: "8.25x15",
+          price: 320,
+        },
+
+        {
+          colazh: "23.1R-26",
+          manufacturer: "ХТЗ",
+          size: "23.1R-26",
+          price: null,
+        },
+
+        { colazh: "9.5-32", manufacturer: "Т16", size: "9.5-32", price: 415 },
+        { colazh: "6.50-16", manufacturer: "Т16", size: "6.50-16", price: 130 },
+
+        {
+          colazh: "320/85R20",
+          manufacturer: "JOHN DEERE",
+          size: "320/85R20",
+          price: null,
+        },
+        {
+          colazh: "320/70R24",
+          manufacturer: "JOHN DEERE",
+          size: "320/70R24",
+          price: null,
+        },
+        {
+          colazh: "340/85R24",
+          manufacturer: "JOHN DEERE",
+          size: "340/85R24",
+          price: null,
+        },
+        {
+          colazh: "360/70R24",
+          manufacturer: "JOHN DEERE",
+          size: "360/70R24",
+          price: null,
+        },
+        {
+          colazh: "380/70R24",
+          manufacturer: "JOHN DEERE",
+          size: "380/70R24",
+          price: null,
+        },
+        {
+          colazh: "380/85R24",
+          manufacturer: "JOHN DEERE",
+          size: "380/85R24",
+          price: null,
+        },
+        // ... Add all other entries similarly ...
+      ];
+
+      // Function to render the table body
+      function renderTable(data) {
+        const tbody = document.querySelector("#gumiTable tbody");
+        tbody.innerHTML = "";
+        data.forEach((item) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+          <td>${item.colazh || "-"}</td>
+          <td>${item.manufacturer || "-"}</td>
+          <td>${item.size || "-"}</td>
+          <td>${item.price != null ? item.price + " лв." : "-"}</td>
         `;
-        tbody.appendChild(tr);
-      });
-    }
-
-    // Sorting logic
-    let currentSort = { column: null, direction: 1 };
-
-    function sortTable(column) {
-      if (currentSort.column === column) {
-        currentSort.direction *= -1;
-      } else {
-        currentSort.column = column;
-        currentSort.direction = 1;
+          tbody.appendChild(tr);
+        });
       }
 
-      gumiData.sort((a, b) => {
-        let valA = a[column] || '';
-        let valB = b[column] || '';
+      // Sorting logic
+      let currentSort = { column: null, direction: 1 };
 
-        // For price, sort numbers; for others, sort strings
-        if (column === 'price') {
-          valA = valA === null ? -Infinity : valA;
-          valB = valB === null ? -Infinity : valB;
-          return (valA - valB) * currentSort.direction;
+      function sortTable(column) {
+        if (currentSort.column === column) {
+          currentSort.direction *= -1;
         } else {
-          return valA.toString().localeCompare(valB.toString()) * currentSort.direction;
+          currentSort.column = column;
+          currentSort.direction = 1;
         }
-      });
 
-      updateSortIndicators();
-      renderTable(gumiData);
-    }
+        gumiData.sort((a, b) => {
+          let valA = a[column] || "";
+          let valB = b[column] || "";
 
-    function updateSortIndicators() {
-      const headers = document.querySelectorAll("#gumiTable thead th");
-      headers.forEach(th => {
-        th.classList.remove('sort-asc', 'sort-desc');
-        if (th.dataset.column === currentSort.column) {
-          th.classList.add(currentSort.direction === 1 ? 'sort-asc' : 'sort-desc');
-        }
-      });
-    }
-
-    // Initialize
-    document.addEventListener('DOMContentLoaded', () => {
-      renderTable(gumiData);
-      document.querySelectorAll("#gumiTable thead th").forEach(th => {
-        th.addEventListener('click', () => sortTable(th.dataset.column));
-      });
-
-      // Initialize Google Map
-      function initMap() {
-        const staraZagora = { lat: 42.4018, lng: 25.6437 };
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 13,
-          center: staraZagora,
+          // For price, sort numbers; for others, sort strings
+          if (column === "price") {
+            valA = valA === null ? -Infinity : valA;
+            valB = valB === null ? -Infinity : valB;
+            return (valA - valB) * currentSort.direction;
+          } else {
+            return (
+              valA.toString().localeCompare(valB.toString()) *
+              currentSort.direction
+            );
+          }
         });
-        new google.maps.Marker({
-          position: staraZagora,
-          map: map,
+
+        updateSortIndicators();
+        renderTable(gumiData);
+      }
+
+      function updateSortIndicators() {
+        const headers = document.querySelectorAll("#gumiTable thead th");
+        headers.forEach((th) => {
+          th.classList.remove("sort-asc", "sort-desc");
+          if (th.dataset.column === currentSort.column) {
+            th.classList.add(
+              currentSort.direction === 1 ? "sort-asc" : "sort-desc"
+            );
+          }
         });
       }
-      window.initMap = initMap;
-    });
-  </script>
 
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBslCFULaHWdCOXrRZQ1XlQNadQcLfS68Q&callback=initMap">
-  </script>
-</body>
+      // Initialize
+      document.addEventListener("DOMContentLoaded", () => {
+        renderTable(gumiData);
+        document.querySelectorAll("#gumiTable thead th").forEach((th) => {
+          th.addEventListener("click", () => sortTable(th.dataset.column));
+        });
+
+        // Initialize Google Map
+        function initMap() {
+          const staraZagora = { lat: 42.4018, lng: 25.6437 };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 13,
+            center: staraZagora,
+          });
+          new google.maps.Marker({
+            position: staraZagora,
+            map: map,
+          });
+        }
+        window.initMap = initMap;
+      });
+    </script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBslCFULaHWdCOXrRZQ1XlQNadQcLfS68Q&callback=initMap"
+    ></script>
+  </body>
 </html>
