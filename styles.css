@@ -96,9 +96,11 @@ body {
 }
 
 table {
-  width: 50%;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto 2rem;
   border-collapse: collapse;
+  box-sizing: border-box;
 }
 th,
 td {
