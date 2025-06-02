@@ -36,11 +36,11 @@
         <div class="tagline">
           <span><i class="fas fa-map-marker-alt"></i> Стара Загора</span>
           <span class="delimiter">•</span>
-          висококачествени селскостопански гуми
+          Селскостопански гуми
           <span class="delimiter">•</span>
-          тракторни гуми
+          Тракторни гуми
           <span class="delimiter">•</span>
-          доставка и безплатен монтаж
+          Доставка и безплатен монтаж
           <br />
           <span><i class="fa-solid fa-phone"></i> Телефон </span>
           <span class="delimiter">•</span>
@@ -62,8 +62,7 @@
       <table id="gumiTable">
         <thead>
           <tr>
-            <th data-column="colazh">Цолаж</th>
-            <th data-column="manufacturer">Производител</th>
+            <th data-column="manufacturer">Предназначение / Трактор</th>
             <th data-column="size">Размер</th>
             <th data-column="price">Цена (лв.)</th>
           </tr>
@@ -161,146 +160,38 @@
 
     <script>
       // Your data converted from Excel (sample from your data)
-      const gumiData = [
-        { colazh: "13.6-38", manufacturer: "ЮМЗ", size: "13.6-38", price: 630 },
-        { colazh: "15.5-38", manufacturer: "ЮМЗ", size: "15.5-38", price: 670 },
-        { colazh: "7.50-20", manufacturer: "ЮМЗ", size: "7.50-20", price: 180 },
+     const gumiData = [
+  { manufacturer: "ЮМЗ", size: "13.6-38", price: 630 },
+  { manufacturer: "ЮМЗ", size: "15.5-38", price: 670 },
+  { manufacturer: "ЮМЗ", size: "7.50-20", price: 180 },
 
-        {
-          colazh: "13.6-38",
-          manufacturer: "БОЛГАР",
-          size: "13.6-38",
-          price: 630,
-        },
-        {
-          colazh: "15.5-38",
-          manufacturer: "БОЛГАР",
-          size: "15.5-38",
-          price: 670,
-        },
-        {
-          colazh: "7.50-20",
-          manufacturer: "БОЛГАР",
-          size: "7.50-20",
-          price: 180,
-        },
-        {
-          colazh: "8.3-20",
-          manufacturer: "БОЛГАР",
-          size: "8.3-20",
-          price: null,
-        },
-        {
-          colazh: "11.2-20",
-          manufacturer: "БОЛГАР",
-          size: "11.2-20",
-          price: null,
-        },
+  { manufacturer: "БОЛГАР", size: "13.6-38", price: 630 },
+  { manufacturer: "БОЛГАР", size: "15.5-38", price: 670 },
+  { manufacturer: "БОЛГАР", size: "7.50-20", price: 180 },
+  { manufacturer: "БОЛГАР", size: "8.3-20", price: null },
+  { manufacturer: "БОЛГАР", size: "11.2-20", price: null },
 
-        {
-          colazh: "18.4-34",
-          manufacturer: "БЕЛАРУС",
-          size: "18.4-34",
-          price: 1000,
-        },
-        {
-          colazh: "16.9-38",
-          manufacturer: "БЕЛАРУС",
-          size: "16.9-38",
-          price: 900,
-        },
-        {
-          colazh: "360/70R24",
-          manufacturer: "БЕЛАРУС",
-          size: "360/70R24",
-          price: 640,
-        },
-        {
-          colazh: "360/70R20",
-          manufacturer: "БЕЛАРУС",
-          size: "360/70R20",
-          price: 570,
-        },
+  { manufacturer: "БЕЛАРУС", size: "18.4-34", price: 1000 },
+  { manufacturer: "БЕЛАРУС", size: "16.9-38", price: 900 },
+  { manufacturer: "БЕЛАРУС", size: "360/70R24", price: 640 },
+  { manufacturer: "БЕЛАРУС", size: "360/70R20", price: 570 },
 
-        { colazh: "13.6-38", manufacturer: "Т40", size: "13.6-38", price: 630 },
-        {
-          colazh: "14.9-30",
-          manufacturer: "Т40",
-          size: "14.9-30",
-          price: null,
-        },
-        { colazh: "8.3-20", manufacturer: "Т40", size: "8.3-20", price: null },
+  { manufacturer: "Т40", size: "13.6-38", price: 630 },
+  { manufacturer: "Т40", size: "14.9-30", price: null },
+  { manufacturer: "Т40", size: "8.3-20", price: null },
 
-        { colazh: "11.2-28", manufacturer: "Т25", size: "11.2-28", price: 400 },
+  { manufacturer: "Т25", size: "11.2-28", price: 400 },
 
-        {
-          colazh: "530R610",
-          manufacturer: "Т150 NORTEC",
-          size: "530R610",
-          price: null,
-        },
-        {
-          colazh: "530R610",
-          manufacturer: "Т150 КАМА",
-          size: "530R610",
-          price: null,
-        },
+  { manufacturer: "Т150 NORTEC", size: "530R610", price: null },
+  { manufacturer: "Т150 КАМА", size: "530R610", price: null },
 
-        {
-          colazh: "8.25x15",
-          manufacturer: "4 ТОНА РЕМАРКЕ",
-          size: "8.25x15",
-          price: 320,
-        },
+  { manufacturer: "4 ТОНА РЕМАРКЕ", size: "8.25x15", price: 320 },
 
-        {
-          colazh: "23.1R-26",
-          manufacturer: "ХТЗ",
-          size: "23.1R-26",
-          price: null,
-        },
+  { manufacturer: "ХТЗ", size: "23.1R-26", price: null },
 
-        { colazh: "9.5-32", manufacturer: "Т16", size: "9.5-32", price: 415 },
-        { colazh: "6.50-16", manufacturer: "Т16", size: "6.50-16", price: 130 },
-
-        {
-          colazh: "320/85R20",
-          manufacturer: "JOHN DEERE",
-          size: "320/85R20",
-          price: null,
-        },
-        {
-          colazh: "320/70R24",
-          manufacturer: "JOHN DEERE",
-          size: "320/70R24",
-          price: null,
-        },
-        {
-          colazh: "340/85R24",
-          manufacturer: "JOHN DEERE",
-          size: "340/85R24",
-          price: null,
-        },
-        {
-          colazh: "360/70R24",
-          manufacturer: "JOHN DEERE",
-          size: "360/70R24",
-          price: null,
-        },
-        {
-          colazh: "380/70R24",
-          manufacturer: "JOHN DEERE",
-          size: "380/70R24",
-          price: null,
-        },
-        {
-          colazh: "380/85R24",
-          manufacturer: "JOHN DEERE",
-          size: "380/85R24",
-          price: null,
-        },
-        // ... Add all other entries similarly ...
-      ];
+  { manufacturer: "Т16", size: "9.5-32", price: 415 },
+  { manufacturer: "Т16", size: "6.50-16", price: 130 }
+];
 
       // Function to render the table body
       function renderTable(data) {
@@ -309,7 +200,6 @@
         data.forEach((item) => {
           const tr = document.createElement("tr");
           tr.innerHTML = `
-          <td>${item.colazh || "-"}</td>
           <td>${item.manufacturer || "-"}</td>
           <td>${item.size || "-"}</td>
           <td>${item.price != null ? item.price + " лв." : "-"}</td>
