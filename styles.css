@@ -87,6 +87,15 @@ body {
   .tagline {
     font-size: 1rem;
   }
+
+  table {
+    max-width: 90%;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
 }
 
 .map-container {
