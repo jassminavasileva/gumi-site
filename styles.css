@@ -109,18 +109,16 @@ table {
   max-width: 600px;
   margin: 0 auto 2rem;
   border-collapse: collapse;
-  box-sizing: border-box;
+  overflow-x: auto;
+  display: block;
 }
 th,
-td {
+th, td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: center;
-  cursor: pointer;
-}
-th {
-  background-color: #f4f4f4;
-  user-select: none;
+  min-width: 100px; /* prevents overly narrow columns */
+  box-sizing: border-box;
 }
 th.sort-asc::after {
   content: " ▲";
