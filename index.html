@@ -2,16 +2,17 @@
 <html lang="bg">
   <head>
     <meta charset="UTF-8" />
-     <meta name="description" content="Селскостопански гуми и джанти за трактори и машини. Руски гуми КАМА. Продажба, монтаж, доставка. Стара Загора, България." />
+    <meta
+      name="description"
+      content="Селскостопански гуми и джанти за трактори и машини. Руски гуми КАМА. Продажба, монтаж, доставка. Стара Загора, България."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Селскостопански гуми и джанти - Стара Загора</title>
-
-    <!-- Google Fonts -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
@@ -20,94 +21,77 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <div class="navbar">
-      <div class="brand">
+    <div class="top-nav">
+      <div class="logo">
         <a href="index.html">
           <img src="tyre-logo.png" alt="Tyre Logo" />
         </a>
       </div>
-      <div class="navbar-right">
-        <a class="contact-link" href="contacts.html">КОНТАКТИ</a>
-      </div>
-    </div>
-
-    <div class="navbar-second">
-      <div class="container">
-        <div class="tagline">
-          <span><i class="fas fa-map-marker-alt"></i> Стара Загора, ул. "Св. Патриарх Евтимий" 26</span>
-          <span class="delimiter">•</span>
-          Селскостопански гуми
-          <span class="delimiter">•</span>
-          Тракторни гуми
-          <span class="delimiter">•</span>
-          Руски гуми КАМА
-          <span class="delimiter">•</span>
-          Доставка и безплатен монтаж
+      <div class="contact-info">
+        <span>
+          <i class="fa-solid fa-phone"></i>
+          <a class="contact-link" href="tel:+359888213650">0888 213 650</a>
+          |
+          <a class="contact-link" href="tel:+359888213650">0888 213 650</a>
+          <i class="fa-regular fa-envelope"></i>
+          <a class="contact-link" href="mailto:agritires@gmail.com"
+            >agritires@gmail.com</a
+          >
           <br />
-          <span><i class="fa-solid fa-phone"></i> Телефон </span>
-          <span class="delimiter">•</span>
-          <a href="tel:+359888213650">0888 213 650</a>
-          <span class="delimiter">•</span>
-          <a href="tel:+359889947557">0889 947 557</a>
-        </div>
+          <i class="fas fa-map-marker-alt"></i>
+          <a class="contact-link" href="#map"
+            >Стара Загора, ул. "Патриарх Евтимий" 26</a
+          >
+        </span>
+      </div>
+    </div>
+    <div class="main-nav">
+      <a href="#table">Селскостопански гуми</a>
+      <a href="#table"> Тракторни гуми</a>
+      <a href="#table">Руски гуми</a>
+      <a href="#table">Гуми за Кама</a>
+      <a href="#gallery">Галерия</a>
+    </div>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Селскостопански гуми | Безплатен монтаж</h1>
+        <a href="#table" class="btn">Виж продуктите</a>
       </div>
     </div>
 
-    <div class="map-container" id="map"></div>
-    <div class="container">
-    <!-- Tyres Table Section -->
-    <section
-      style="padding: 2rem; background-color: #f9f9f9; text-align: center"
-    >
-      <h2 style="margin-bottom: 1.5rem; color: #2c3e50">
-        Селскостопански гуми | Руски гуми
-      </h2>
-      <table id="gumiTable">
-        <thead>
-          <tr>
-            <th data-column="manufacturer">Предназначение / Трактор</th>
-            <th data-column="size">Размер</th>
-            <th data-column="price">Цена (лв.)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Data will be loaded here -->
-        </tbody>
-      </table>
-    </section>
-    <!-- About Us Section -->
-        <!-- About Us Section -->
-
-    <section id="about">
-      <h2>Селскостопански гуми и джанти - Стара Загора</h2>
-      <p>
-        Професионална грижа за клиента с точните селскостопански гуми и джанти.
-        Товарене, разтоварване, безплатен монтаж и доставка.
-      </p>
-    </section>
-
-    <section id="about">
+    <!-- Map Section -->
+    <section id="map" class="section">
       <h2>Нашият магазин</h2>
       <p>Стара Загора, бул. Свети Патриарх Евтимий 26</p>
       <p>
         Телефон магазин: <a href="tel:0889947557">0889947557</a>, офис:
         <a href="tel:0888213650">0888213650</a>
       </p>
-      <p>
-        Уебсайт:
-        <a href="https://www.selskostopanskigumi.com/"
-          >selskostopanskigumi.com</a
-        >
-      </p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47130.63726745546!2d25.603815659308218!3d42.41358172488383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a86be7180f4099%3A0x9f87101e3a680285!2sKolyo%20Ganchev%2C%20bul.%20%22Sveti%20Patriarh%20Evtimiy%22%2026%2C%206006%20Stara%20Zagora!5e0!3m2!1sen!2sbg!4v1748835393914!5m2!1sen!2sbg"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </section>
 
-    <section id="about">
+    <div class="section" id="about">
+      <h2>Селскостопански гуми и джанти - Стара Загора</h2>
+      <p>
+        Професионална грижа за клиента с точните селскостопански гуми и джанти.
+        Товарене, разтоварване, безплатен монтаж и доставка.
+      </p>
+    </div>
+
+    <div class="section" id="about">
       <h2>Продукти и услуги</h2>
       <ul>
-        <li>
-          СЕЛСКОСТОПАНСКИ ГУМИ, ГУМИ ЗА ТРАКТОР, ДЖАНТИ
-        </li>
+        <li>СЕЛСКОСТОПАНСКИ ГУМИ, ГУМИ ЗА ТРАКТОР, ДЖАНТИ</li>
         <li>
           Гуми за трактор: ЮМЗ, БОЛГАР, БЕЛАРУС, JOHN DEERE, KUBOTA, NEW
           HOLLAND, CLAAS
@@ -120,9 +104,9 @@
         </li>
         <li>Индустриални гуми и гуми за ремаркета</li>
       </ul>
-    </section>
+    </div>
 
-    <section id="about">
+    <section id="about" class="section">
       <h2>Марки гуми</h2>
       <p>
         Предлагаме гуми от производители: Petlas, Seha, Ozka, Carlisle, Mitas,
@@ -131,7 +115,7 @@
       </p>
     </section>
 
-    <section id="about">
+    <section id="about" class="section">
       <h2>Градове, които обслужваме</h2>
       <p>
         Стара Загора, Пловдив, Сливен, Ямбол, Хасково, Бургас, Айтос, София и
@@ -139,8 +123,22 @@
       </p>
     </section>
 
-    <!-- Image Gallery Section -->
-    <section class="gallery">
+    <div class="section" id="table">
+      <h2>Селскостопански гуми | Руски гуми | Руски Гуми КАМА</h2>
+      <table id="gumiTable">
+        <thead>
+          <tr>
+            <th data-column="manufacturer">Предназначение / Трактор</th>
+            <th data-column="size">Размер</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be loaded here -->
+        </tbody>
+      </table>
+    </div>
+
+    <section class="section" id="gallery">
       <h2>Галерия</h2>
       <div class="images-container">
         <img src="gumi_01.jpg" alt="Гума 1" />
@@ -154,76 +152,79 @@
         <img src="gumi_09.jpg" alt="Гума 9" />
       </div>
     </section>
-</div>
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <i class="fa-solid fa-phone"></i>
-        <p>
-          <a href="tel:+359889947557">+359 889 947 557</a>
-        </p>
-        <i class="fa-solid fa-phone"></i>
-        <p>
-          <a href="tel:+359888213650">+359 888 213 650</a>
-        </p>
-        <i class="fa-regular fa-envelope"></i>
-        <p>
-          <a href="mailto:agritires@gmail.com">agritires@gmail.com</a>
-        </p>
-        <i class="fas fa-map-marker-alt"></i>
-        <p>Стара Загора, бул. Св. Патриарх Евтимий" 26</p>
 
-        <div class="social-links">
-          <a
-            href="https://www.facebook.com/GUMI0STARA0ZAGORA/"
-            target="_blank"
-            aria-label="Facebook"
+    <div class="section" id="contact">
+      <i class="fa-solid fa-phone"></i>
+      <a class="contact-link" href="tel:+359888213650">0888 213 650</a>
+      |
+      <a class="contact-link" href="tel:+359888213650">0888 213 650</a>
+      <i class="fa-regular fa-envelope"></i>
+      <a class="contact-link" href="mailto:agritires@gmail.com"
+        >agritires@gmail.com</a
+      >
+      <br />
+      <i class="fas fa-map-marker-alt"></i>
+      <a class="contact-link" href="#map"
+        >Стара Загора, ул. "Патриарх Евтимий" 26</a
+      >
+    </div>
+
+    <footer class="footer">
+      <div class="logo">
+        <img src="tyre-logo.png" alt="Gumi Store Logo" style="height: 40px" />
+      </div>
+      <div class="contact-info">
+        <span>
+          <i class="fa-solid fa-phone"></i>
+          <a class="contact-link" href="tel:+359888213650">0888 213 650</a>
+          |
+          <a class="contact-link" href="tel:+359888213650">0888 213 650</a>
+          <i class="fa-regular fa-envelope"></i>
+          <a class="contact-link" href="mailto:agritires@gmail.com"
+            >agritires@gmail.com</a
           >
-            <i class="fab fa-facebook"></i>
-          </a>
-          <div class="brand">
-            <a href="index.html">
-              <img src="tyre-logo.png" alt="Tyre Logo" />
-            </a>
-          </div>
-        </div>
+          <br />
+          <i class="fas fa-map-marker-alt"></i>
+          <a class="contact-link" href="#map"
+            >Стара Загора, ул. "Патриарх Евтимий" 26</a
+          >
+        </span>
       </div>
     </footer>
-
     <script>
       // Your data converted from Excel (sample from your data)
-     const gumiData = [
-  { manufacturer: "ЮМЗ", size: "13.6-38", price: 630 },
-  { manufacturer: "ЮМЗ", size: "15.5-38", price: 670 },
-  { manufacturer: "ЮМЗ", size: "7.50-20", price: 180 },
+      const gumiData = [
+        { manufacturer: "ЮМЗ", size: "13.6-38", price: 630 },
+        { manufacturer: "ЮМЗ", size: "15.5-38", price: 670 },
+        { manufacturer: "ЮМЗ", size: "7.50-20", price: 180 },
 
-  { manufacturer: "БОЛГАР", size: "13.6-38", price: 630 },
-  { manufacturer: "БОЛГАР", size: "15.5-38", price: 670 },
-  { manufacturer: "БОЛГАР", size: "7.50-20", price: 180 },
-  { manufacturer: "БОЛГАР", size: "8.3-20", price: null },
-  { manufacturer: "БОЛГАР", size: "11.2-20", price: null },
+        { manufacturer: "БОЛГАР", size: "13.6-38", price: 630 },
+        { manufacturer: "БОЛГАР", size: "15.5-38", price: 670 },
+        { manufacturer: "БОЛГАР", size: "7.50-20", price: 180 },
+        { manufacturer: "БОЛГАР", size: "8.3-20", price: null },
+        { manufacturer: "БОЛГАР", size: "11.2-20", price: null },
 
-  { manufacturer: "БЕЛАРУС", size: "18.4-34", price: 1000 },
-  { manufacturer: "БЕЛАРУС", size: "16.9-38", price: 900 },
-  { manufacturer: "БЕЛАРУС", size: "360/70R24", price: 640 },
-  { manufacturer: "БЕЛАРУС", size: "360/70R20", price: 570 },
+        { manufacturer: "БЕЛАРУС", size: "18.4-34", price: 1000 },
+        { manufacturer: "БЕЛАРУС", size: "16.9-38", price: 900 },
+        { manufacturer: "БЕЛАРУС", size: "360/70R24", price: 640 },
+        { manufacturer: "БЕЛАРУС", size: "360/70R20", price: 570 },
 
-  { manufacturer: "Т40", size: "13.6-38", price: 630 },
-  { manufacturer: "Т40", size: "14.9-30", price: null },
-  { manufacturer: "Т40", size: "8.3-20", price: null },
+        { manufacturer: "Т40", size: "13.6-38", price: 630 },
+        { manufacturer: "Т40", size: "14.9-30", price: null },
+        { manufacturer: "Т40", size: "8.3-20", price: null },
 
-  { manufacturer: "Т25", size: "11.2-28", price: 400 },
+        { manufacturer: "Т25", size: "11.2-28", price: 400 },
 
-  { manufacturer: "Т150 NORTEC", size: "530R610", price: null },
-  { manufacturer: "Т150 КАМА", size: "530R610", price: null },
+        { manufacturer: "Т150 NORTEC", size: "530R610", price: null },
+        { manufacturer: "Т150 КАМА", size: "530R610", price: null },
 
-  { manufacturer: "4 ТОНА РЕМАРКЕ", size: "8.25x15", price: 320 },
+        { manufacturer: "4 ТОНА РЕМАРКЕ", size: "8.25x15", price: 320 },
 
-  { manufacturer: "ХТЗ", size: "23.1R-26", price: null },
+        { manufacturer: "ХТЗ", size: "23.1R-26", price: null },
 
-  { manufacturer: "Т16", size: "9.5-32", price: 415 },
-  { manufacturer: "Т16", size: "6.50-16", price: 130 }
-];
+        { manufacturer: "Т16", size: "9.5-32", price: 415 },
+        { manufacturer: "Т16", size: "6.50-16", price: 130 },
+      ];
 
       // Function to render the table body
       function renderTable(data) {
@@ -234,7 +235,6 @@
           tr.innerHTML = `
           <td>${item.manufacturer || "-"}</td>
           <td>${item.size || "-"}</td>
-          <td>${item.price != null ? item.price + " лв." : "-"}</td>
         `;
           tbody.appendChild(tr);
         });
@@ -286,30 +286,24 @@
 
       // Initialize
       function initMap() {
-  const staraZagora = { lat: 42.4018, lng: 25.6437 };
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 13,
-    center: staraZagora,
-  });
-  new google.maps.Marker({
-    position: staraZagora,
-    map: map,
-  });
-}
-window.initMap = initMap;
+        const staraZagora = { lat: 42.4018, lng: 25.6437 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 13,
+          center: staraZagora,
+        });
+        new google.maps.Marker({
+          position: staraZagora,
+          map: map,
+        });
+      }
+      window.initMap = initMap;
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderTable(gumiData);
-  document.querySelectorAll("#gumiTable thead th").forEach((th) => {
-    th.addEventListener("click", () => sortTable(th.dataset.column));
-  });
-});
+      document.addEventListener("DOMContentLoaded", () => {
+        renderTable(gumiData);
+        document.querySelectorAll("#gumiTable thead th").forEach((th) => {
+          th.addEventListener("click", () => sortTable(th.dataset.column));
+        });
+      });
     </script>
-
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBslCFULaHWdCOXrRZQ1XlQNadQcLfS68Q&callback=initMap"
-    ></script>
   </body>
 </html>
