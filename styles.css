@@ -59,7 +59,7 @@ body {
       rgba(255, 255, 255, 1)
     ),
     url("gumi_01.jpg") no-repeat center center;
-  background-size: contain;
+  background-size: cover;
   background-color: black;
   color: white;
 }
