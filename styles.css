@@ -52,7 +52,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 400px;
   background: url("gumi_01.jpg") no-repeat center center;
   background-size: cover;
   color: white;
