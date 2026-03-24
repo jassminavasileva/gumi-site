@@ -50,7 +50,7 @@ body {
 .hero-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  max-height: 400px;   /* 👈 controls size */
   background:
     linear-gradient(
       to bottom,
@@ -60,7 +60,8 @@ body {
     ),
     url("gumi_01.jpg") no-repeat center center;
   background-size: contain;
-  background-color: black; /* fills empty space nicely */
+  background-color: black;
+  color: white;
 }
 
 .hero-text {
