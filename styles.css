@@ -10,7 +10,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #1f2937;
   color: white;
 }
 
@@ -76,12 +76,12 @@ body {
 }
 
 .section {
-  padding: 40px 20px;
+  padding: 60px 30px;
   max-width: 1000px;
   margin: auto;
   background-color: white;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .section a {
@@ -168,6 +168,15 @@ footer {
 .footer a.contact-link {
   color: #deb36f;
   text-decoration: none;
+}
+
+a, .btn, th {
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background-color: #f59e0b;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
