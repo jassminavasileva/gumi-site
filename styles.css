@@ -57,11 +57,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  height: 700px; /* match your image height */
+  background: url("gumi_01.jpg") no-repeat center center;
+  background-size: contain; /* THIS is the key */
+  background-color: #000; /* optional: fills empty space */
+  color: white;
+}
+
+/* .hero-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 800px;
   background: url("gumi_01.jpg") no-repeat center center;
   background-size: cover;
   color: white;
-}
+} */
 
 .hero-text {
   text-align: center;
