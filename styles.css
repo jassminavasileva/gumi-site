@@ -86,7 +86,7 @@ body {
 .hero-image-section {
   display: flex;
   justify-content: center;
-  background-color: #000; /* optional */
+  background-color: #f2f2f2;
   padding: 40px 0;
 }
 
