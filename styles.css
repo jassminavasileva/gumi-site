@@ -65,6 +65,22 @@ body {
   color: white;
 }
 
+.hero-image-section {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 40px 0;
+}
+
+.hero-image-section img {
+  width: 100%;
+  max-width:1000px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
